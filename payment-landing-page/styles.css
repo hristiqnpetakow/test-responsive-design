@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(29, 26, 26);
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.nav img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav button {
+  padding: 10px 20px 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.first-section-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.sec-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.sec-img img {
+  width: auto;
+  height: 500px;
+}
+
+.text-sec {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.text-sec button {
+  width: 120px;
+  padding: 10px;
+}
+
+.t1 {
+  font-size: 34px;
+  color: rgb(172, 167, 167);
+}
+
+.t2 {
+  font-size: 44px;
+  color: white;
+  font-weight: 600;
+}
+
+.t3 {
+  font-size: 44px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hamburger-button {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.mobile-menu-section {
+  display: none;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-content a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 20px 5px;
+}
+
+.mobile-menu-content a:hover {
+  background-color: grey;
+}
+
+@media only screen and (max-width: 720px) {
+  .hamburger-button {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .first-section-box {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .text-sec {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .sec-img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .sec-img img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 407px) {
+  .text-sec {
+    text-align: center;
+  }
+}

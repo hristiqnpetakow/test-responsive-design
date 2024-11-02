@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <img src="./design/logoo.png" alt="" />
+        </div>
+        <div class="desktop-menu">
+          <a href="">Featuring</a>
+          <a href="">Pricing</a>
+          <a href="">Help</a>
+          <a href="">Blog</a>
+          <a href="">About us</a>
+        </div>
+        <div>
+          <button>Log In</button>
+          <button>Sign Up</button>
+        </div>
+
+        <!-- Hamburger button -->
+        <div class="hamburger-button" onclick="showMobileContent(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile content -->
+    <section class="mobile-menu-section">
+      <div class="mobile-menu-content">
+        <a href="">Featuring</a>
+        <a href="">Pricing</a>
+        <a href="">Help</a>
+        <a href="">Blog</a>
+        <a href="">About us</a>
+      </div>
+    </section>
+
+    <!-- First section -->
+    <section class="first-section">
+      <div class="first-section-box">
+        <div class="text-sec">
+          <span class="t1">Start saving money</span>
+          <span class="t2">Smart Credit Card</span>
+          <span class="t3">For Your Daily Life</span>
+          <button>Download</button>
+        </div>
+        <div class="sec-img">
+          <img src="./design/mobilee.png" alt="" />
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      function showMobileContent(x) {
+        x.classList.toggle("change");
+      }
+
+      const btn = document.querySelector(".hamburger-button");
+      const target = document.querySelector(".mobile-menu-section");
+
+      btn.addEventListener("click", function () {
+        if (target.style.display === "block") {
+          target.style.display = "none";
+        } else {
+          target.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
